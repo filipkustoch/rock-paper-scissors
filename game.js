@@ -41,8 +41,7 @@ function playRound(playerSelection, computerChoiceResult) {
             if (timer < 0) {
                 //Clears the timeout 
                 clearTimeout(intervalID);
-                // You can redirect the user after it 
-                // window.location.assign("YourURL");
+                // Action after timeout
                 if (playerSelection == computerChoiceResult) {
                     wynikRundy.innerHTML = "W tej rundzie jest remis!";
                 } else if ((computerChoiceResult == "rock" && playerSelection == "scissors") ||
@@ -54,9 +53,6 @@ function playRound(playerSelection, computerChoiceResult) {
                     wynikRundy.innerHTML = "W tej rundzie wygrał gracz!";
                     playerScore++;
                 }
-                // if (playerScore == 3 || computerScore == 3) {
-                //     endOfGame = true;
-                // }
                 playerScoreText.innerHTML = "Wynik gracza to: " + playerScore;
                 computerScoreText.innerHTML = "Wynik komputera to: " + computerScore;
             }
@@ -65,9 +61,8 @@ function playRound(playerSelection, computerChoiceResult) {
 
     }
 
-    //Modifies the countdown display
+    //Display counter
     function display(timer) {
-        //Execute your diplay modification logic
         wynikRundy.innerHTML = timer;
     }
 }
