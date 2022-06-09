@@ -1,0 +1,9 @@
+.buttons{
+    display:flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.buttons button {
+    width: 33vw;
+}

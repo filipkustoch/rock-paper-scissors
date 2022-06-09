@@ -10,17 +10,19 @@ function computerPlay() {
     return computerChoiceResult;
 }
 
-function playerPlay() {
-    let playerSelection = prompt("Rock,Paper,Scisors?");
-    playerSelection = playerSelection.toLowerCase();
-    if (playerSelection === "r") {
-        playerSelection = "rock";
-    } else if (playerSelection === "p") {
-        playerSelection = "paper";
-    } else if (playerSelection === "s") {
-        playerSelection = "scisors";
-    }
-    console.log("Player choice is " + playerSelection);
+function playerPlay(playerSelection) {
+    // let playerSelection = prompt("Rock,Paper,Scisors?");
+    // playerSelection = playerSelection.toLowerCase();
+    // if (playerSelection === "r") {
+    //     playerSelection = "rock";
+    // } else if (playerSelection === "p") {
+    //     playerSelection = "paper";
+    // } else if (playerSelection === "s") {
+    //     playerSelection = "scisors";
+    // }
+    // console.log("Player choice is " + playerSelection);
+    // return playerSelection;
+    console.log(playerSelection);
     return playerSelection;
 }
 
@@ -43,15 +45,27 @@ function playRound(playerSelection, computerChoiceResult) {
 }
 
 function game() {
-    while (!endOfGame) {
-        playRound(playerPlay(), computerPlay());
-    }
-    if (endOfGame == true) {
-        if (playerScore > computerScore) {
-            wygrany = "Gracz";
-        } else {
-            wygrany = "komputer";
-        }
-        alert("Wygrał " + wygrany);
-    }
+    //while (!endOfGame) {
+    playRound(playerPlay(), computerPlay());
+    //}
+    // if (endOfGame == true) {
+    //     if (playerScore > computerScore) {
+    //         wygrany = "Gracz";
+    //     } else {
+    //         wygrany = "komputer";
+    //     }
+    //     alert("Wygrał " + wygrany);
+    // }
+}
+
+function gameRock() {
+    playRound(playerPlay("rock"), computerPlay());
+}
+
+function gamePaper() {
+    playRound(playerPlay("paper"), computerPlay());
+}
+
+function gameScissors() {
+    playRound(playerPlay("scissors"), computerPlay());
 }
