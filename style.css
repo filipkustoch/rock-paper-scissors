@@ -1,9 +1,13 @@
 .buttons{
     display:flex;
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .buttons button {
-    width: 33vw;
+    width: 30%;
+    height: 5vh;
+    border: 5px solid black;
+    font-weight: bold;
+    font-size: 3vh;
 }
