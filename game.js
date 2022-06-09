@@ -15,10 +15,6 @@ function playerPlay(playerSelection) {
     return playerSelection;
 }
 
-
-
-
-
 function playRound(playerSelection, computerChoiceResult) {
 
     let playerScoreText = document.getElementById("gracz");
@@ -57,8 +53,6 @@ function playRound(playerSelection, computerChoiceResult) {
                 computerScoreText.innerHTML = "Wynik komputera to: " + computerScore;
             }
         }, 1000);
-
-
     }
 
     //Display counter
