@@ -55,5 +55,3 @@ function game() {
         alert("Wygrał " + wygrany);
     }
 }
-
-game();
